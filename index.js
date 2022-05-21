@@ -41,27 +41,6 @@ const createEmployeeRecords = twoRows => {
   return employeeRecords
 }
 
-// let bpRecord = createEmployeeRecord(['Byron', 'Poodle', 'Mascot', 3])
-
-// const createTimeInEvent = (empRecord, dateStamp) => {
-//   let dateArr = dateStamp.split(' ')
-//   timeInEvent[1] = parseInt(timeInEvent[1])
-
-//   //   const newEvent = this
-
-//   const timeUpdate = {
-//     type: 'TimeIn',
-//     hour: timeInEvent[1],
-//     date: timeInEvent[0],
-//   }
-
-//   this.timeInEvents.push(timeUpdate)
-
-//   return this
-// }
-
-// createTimeInEvent.call(bpRecord, '2014-02-28 1400')
-
 function createTimeInEvent(dateStamp) {
   let dateArr = dateStamp.split(' ')
   let timeInObj = {
@@ -107,16 +86,3 @@ function findEmployeeByFirstName(srcArray, firstName) {
   let emp = srcArray.find(rec => rec.firstName === firstName)
   return emp
 }
-
-// const allWagesFor = function () {
-//   const eligibleDates = this.timeInEvents.map(function (e) {
-//     return e.date
-//   })
-
-//   const payable = eligibleDates.reduce (
-//       function (memo, d) {
-//           return memo + wagesEarnedOnDate.call(this, d)
-//       }.bind(this), 0
-//       )
-//       return payable
-// }
